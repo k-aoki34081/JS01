@@ -44,7 +44,7 @@ $(".draw").on("click", function(){let omikuji = Math.floor(Math.random()*5);
 //     // なぜファンクションのあとの（）が空欄でいいのか？
 
 
-// // $(".result").html("書き換え")
+// // $(".result").html("書き換え") なぜJQuery経由で、CSSやHTMLを書き換えないといけないのか？→動作に合わせてリアルタイムにその場だけ変更させたい需要があるから。HTMLやCSSは元のマスター版の情報。いちいち書き換えてられない。
 
 
 
@@ -54,5 +54,10 @@ $(".draw").on("click", function(){let omikuji = Math.floor(Math.random()*5);
 // <button class="draw">占う</button>
 // <p class="result">結果が表示されるよ</p>
 // </div>
+
+// javascript は入れ子構造になっている。 詳しくは→ https://docs.google.com/document/d/1v0iqee-wlWQwUsFAmopjm8gD05ZVQYnnl7ZqETUKk-4/edit?tab=t.0  https://docs.google.com/document/d/1yfLup9yFLZGOtG8gFvD_xDgqIdPt8mIMkhoLlohhuMg/edit?tab=t.0
+
+
+
 </script>
 </html>

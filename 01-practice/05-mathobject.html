@@ -9,9 +9,9 @@
     <h1>Mathオブジェクト</h1>
     <script>
         // Mathオブジェクトのメソッド ※Mathが正解、mathではないので注意
-        let num = Math.random()
+        let num = Math.random() // 、**0以上1未満の範囲でランダムな数字（浮動小数点数）**を返す関数、「0以上 0.999999...」 までの数字がバラバラに出てきます。「1」は絶対に出ません。0を含めて1を出さないことで、出したい整数の個数と掛け算する数が一致する。
         console.log(num)
-        num = Math.floor(3.89888);
+        num = Math.floor(3.89888);    // JavaScriptにおける Math.floor() は、与えられた数値以下の最大の整数を返す関数=小数点以下切り捨ての関数 https://docs.google.com/document/d/11x-CPEdVuaj5IYfF4uyFOl1qU-sqCvabVdhXJgVnAgQ/edit?tab=t.0
         console.log(num)
         num = Math.random();
         if(num<0.2){console.log(0)}else if(num<0.4){console.log(1)}else if(num<0.6){console.log(2)}else if(num<0.8){console.log(3)}else{console.log(4)} 

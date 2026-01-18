@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじjQuery</title>
+    <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+<div class = "card"> 
+<h1>おみくじアプリ</h1>
+<button class="draw">占う</button>
+<p class="result">結果が表示されるよ</p>
+</div>
+
+<!-- classはタグに着ける名札で、CSSやjavascriptを使って服をつけたり機能をつけたりするんですね。その通りです！まさに**「HTML＝体、CSS＝服、JavaScript＝筋肉・動作」**という例えは、Web制作の世界ではとても有名な分かりやすい表現です。
+まとめると…HTMLで <button class="draw"> と名札をつけておく。CSSが .draw { ... } を見つけて、おしゃれに装飾する。jQueryが $(".draw").click(...) を見つけて、クリックした時の動きを教える。この**「名札（class）を介して、それぞれが連携する」**という感覚がつかめれば、Webサイト作りはもうマスターしたも同然ですよ！ -->
+</body>
+<script>
+
+$(".draw").on("click", function(){let omikuji = Math.floor(Math.random()*5);
+    if(omikuji === 0){$(".result").html("大吉")}
+    else if(omikuji === 1){$(".result").html("中吉")}
+    else if(omikuji === 2){$(".result").html("小吉")}
+    else if(omikuji === 3){$(".result").html("末吉")}
+    else if(omikuji === 4){$(".result").html("凶")}
+    else if(omikuji === 5){$(".result").html("大凶")}});
+
+
+    // なぜファンクションのあとの（）が空欄でいいのか？結論から言うと、**「今回の処理（おみくじ）では、クリックした瞬間の詳細なデータを使わないから」**です。
+
+// この function() のかっこは、**「イベントの情報を受け取るための窓口」**のような役割をしています。
+
+// 1. 「空欄」の意味
+// 空欄であるということは、**「クリックされたという事実さえわかればOK。それ以上の細かい情報は必要ないよ」**とコンピュータに伝えていることになります。
+
+// 今回のコードでは、クリックされた瞬間に「ランダムな数字を作る」という処理が始まれば十分なので、空欄で問題なく動作します。
+
+// 2. もしかっこに文字（変数）を入れる場合
+// 逆に、かっこに文字を入れるのは**「クリックされた時の詳細なデータ」**を使いたい時です。
+
+// 慣習として e や event という文字を入れることが多いです。
+//     // なぜファンクションのあとの（）が空欄でいいのか？
+
+
+// // $(".result").html("書き換え")
+
+
+
+// スクリプトタグ内は、javascriptの機能の実装だけ入れる必要があって、構造要素や見た目のHTMLタグを入れてはダメ。
+// <div class = "card"> 
+// <h1>おみくじアプリ</h1>
+// <button class="draw">占う</button>
+// <p class="result">結果が表示されるよ</p>
+// </div>
+</script>
+</html>

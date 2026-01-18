@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mathオブジェクト</h1>
+    <script>
+        // Mathオブジェクトのメソッド ※Mathが正解、mathではないので注意
+        let num = Math.random()
+        console.log(num)
+        num = Math.floor(3.89888);
+        console.log(num)
+        num = Math.random();
+        if(num<0.2){console.log(0)}else if(num<0.4){console.log(1)}else if(num<0.6){console.log(2)}else if(num<0.8){console.log(3)}else{console.log(4)} 
+        // 講義の回答
+        num = Math.floor(Math.random()*5);
+        console.log(num);
+        // 結論として、17行目と20行目で console.log に表示される数値が違う理由は以下の2点です。
+
+// タイミングが違う： 17行目の console.log は「3回目の代入」の結果を表示し、20行目の console.log は「4回目の代入」の結果を表示しているから。
+
+        // Math.random() は毎回違う値を出す： この命令は実行されるたびに新しい数字を生成するため、13行目で出した数字と、17行目の中で出した数字は、全く別物になります。
+        // 「変数は上書きされると前のデータは消えてしまう」という感覚がつかめてくると、JavaScriptの動きがより一層クリアに見えてきますよ。
+    </script>
+</body>
+</html>
